@@ -1,0 +1,66 @@
+:root {
+  --gray-100: #f8f4eb;
+  --gray-200: #efe6e6;
+  --gray-300: #dfcccc;
+
+  --primary-100: #ffe1e0;
+  --primary-300: #ffa6a3;
+  --primary-500: #ff6b66;
+  --primary-600: #5e0000;
+
+  --secondary-400: #ffcd58;
+  --secondary-500: #ffc132;
+
+  --fs-body: 1rem;
+
+  --ff-primary: 'DM Sans', sans-serif;
+  --ff-secondary: 'Montserrat', sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  font-size: var(--fs-body);
+  line-height: 1.5;
+  font-family: var(--ff-primary);
+  color: var(--primary-600);
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+video,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+#root {
+  isolation: isolate;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
