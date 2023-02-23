@@ -1,0 +1,29 @@
+.header__link {
+  a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--primary-600);
+    transition: color 0.25s ease-in-out;
+  }
+
+  &:hover {
+    a {
+      color: var(--primary-300);
+    }
+  }
+
+  &:focus-within {
+    a {
+      border-radius: 0.25rem;
+      color: var(--primary-300);
+      outline: 2px solid var(--secondary-500);
+      outline-offset: 3px;
+    }
+  }
+
+  &.active {
+    a {
+      color: var(--primary-500);
+    }
+  }
+}

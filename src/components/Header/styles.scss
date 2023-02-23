@@ -11,7 +11,7 @@
 
 .header__content {
   width: 100%;
-  max-width: 1120px;
+  max-width: 1200px;
   margin-inline: auto;
 
   display: flex;
@@ -34,10 +34,14 @@
 
     .nav-list__left {
       display: flex;
+      align-items: center;
+      gap: 1rem;
     }
 
     .nav-list__right {
       display: flex;
+      align-items: center;
+      gap: 1rem;
     }
   }
 }

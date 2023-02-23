@@ -1,4 +1,5 @@
 import { images } from '../../shared';
+import { HeaderLink } from '../HeaderLink';
 
 import './styles.scss';
 
@@ -11,27 +12,17 @@ export function Header() {
         <nav id="main-navigation" className="main-navigation">
           <ul aria-label="main" className="nav-list">
             <div className="nav-list__left">
-              <li>
-                <a href="/">Home</a>
-              </li>
-              <li>
-                <a href="/">Benefits</a>
-              </li>
-              <li>
-                <a href="/">Our Classes</a>
-              </li>
-              <li>
-                <a href="/">Contact Us</a>
-              </li>
+              <HeaderLink linkTo="/" className="active">
+                Home
+              </HeaderLink>
+              <HeaderLink linkTo="/">Benefits</HeaderLink>
+              <HeaderLink linkTo="/">Our Classes</HeaderLink>
+              <HeaderLink linkTo="/">Contact Us</HeaderLink>
             </div>
 
             <div className="nav-list__right">
-              <li>
-                <a href="/">Sign In</a>
-              </li>
-              <li>
-                <a href="/">Become a Memeber</a>
-              </li>
+              <HeaderLink linkTo="/">Sign In</HeaderLink>
+              <HeaderLink linkTo="/">Become a Member</HeaderLink>
             </div>
           </ul>
         </nav>
