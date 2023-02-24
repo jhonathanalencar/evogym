@@ -7,10 +7,17 @@
   font-weight: bold;
   color: var(--primary-600);
   cursor: pointer;
-  transition: all 0.25s ease-in-out;
+  transition-property: color, background-color;
+  transition-duration: 0.25s;
+  transition-timing-function: ease-in-out;
 
-  &:hover {
+  &:is(:hover, :focus) {
     background-color: var(--primary-500);
     color: var(--gray-100);
+  }
+
+  &:focus {
+    outline: 2px solid var(--secondary-500);
+    outline-offset: 3px;
   }
 }
