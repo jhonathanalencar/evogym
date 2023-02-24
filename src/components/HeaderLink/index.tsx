@@ -14,7 +14,7 @@ export function HeaderLink({
   ...rest
 }: HeaderLinkProps) {
   return (
-    <li className={`header__link ${className}`} {...rest}>
+    <li className={`header__link ${className ? className : ''}`} {...rest}>
       <a href={linkTo}>{children}</a>
     </li>
   );
