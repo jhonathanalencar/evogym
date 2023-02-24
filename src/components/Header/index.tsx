@@ -1,4 +1,5 @@
 import { images } from '../../shared';
+import { CTAButton } from '../CTAButton';
 import { HeaderLink } from '../HeaderLink';
 
 import './styles.scss';
@@ -22,7 +23,7 @@ export function Header() {
 
             <div className="nav-list__right">
               <HeaderLink linkTo="/">Sign In</HeaderLink>
-              <HeaderLink linkTo="/">Become a Member</HeaderLink>
+              <CTAButton>Become a Member</CTAButton>
             </div>
           </ul>
         </nav>

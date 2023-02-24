@@ -1,0 +1,16 @@
+.cta-button {
+  background-color: var(--secondary-500);
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--primary-600);
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+
+  &:hover {
+    background-color: var(--primary-500);
+    color: var(--gray-100);
+  }
+}
