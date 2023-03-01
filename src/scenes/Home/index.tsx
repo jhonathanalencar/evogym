@@ -1,3 +1,5 @@
+import { motion, Variants } from 'framer-motion';
+
 import { useMediaQuery } from '../../hooks/useMediaQuery';
 import { images } from '../../shared';
 
@@ -9,11 +11,25 @@ import './styles.scss';
 export function Home() {
   const isAboveMediumScreen = useMediaQuery('(min-width: 52em)');
 
+  const variants: Variants = {
+    hidden: { opacity: 0, x: -60 },
+    visible: {
+      opacity: 1,
+      x: 0,
+    },
+  };
+
   return (
     <section id="home" className="home">
       <div className="home__container">
         <div className="home__content">
-          <div className="home__info">
+          <motion.div
+            className="home__info"
+            initial="hidden"
+            whileInView="visible"
+            transition={{ duration: 1, staggerChildren: 0.2 }}
+            variants={variants}
+          >
             <div
               className={`home__heading ${
                 isAboveMediumScreen ? 'heading__content' : ''
@@ -31,19 +47,34 @@ export function Home() {
               Body Now.
             </p>
 
-            <div className="home__buttons">
+            <motion.div
+              className="home__buttons"
+              initial="hidden"
+              whileInView="visible"
+              transition={{ duration: 1 }}
+              variants={variants}
+            >
               <CTAButton>Join Now</CTAButton>
 
               <a href="/">Learn More</a>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
-          <div className="home__image">
+          <motion.div
+            className="home__image"
+            initial="hidden"
+            whileInView="visible"
+            transition={{ duration: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, y: 60 },
+              visible: { opacity: 1, y: 0 },
+            }}
+          >
             <img
               src={images.HomePageGraphic}
               alt="woman in red sports bras and red leggings"
             />
-          </div>
+          </motion.div>
         </div>
 
         {isAboveMediumScreen ? <SponsorsBanner /> : null}

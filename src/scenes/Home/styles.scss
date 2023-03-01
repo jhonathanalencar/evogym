@@ -1,21 +1,28 @@
 .home {
   width: 100%;
+  min-height: 100svh;
 
   background-color: var(--gray-100);
 
   @media (min-width: 52em) {
+    min-height: unset;
     height: 100%;
   }
 }
 
 .home__container {
-  height: 100%;
+  min-height: 100svh;
   display: flex;
   flex-direction: column;
+
+  @media (min-width: 52em) {
+    min-height: unset;
+    height: 100%;
+  }
 }
 
 .home__content {
-  height: 100%;
+  min-height: 100svh;
   width: 100%;
   max-width: 1400px;
   margin-inline: auto;
@@ -27,6 +34,9 @@
   align-items: center;
 
   @media (min-width: 52em) {
+    min-height: unset;
+    height: 100%;
+
     padding-block: 0;
     grid-template-columns: 1fr 1fr;
   }
