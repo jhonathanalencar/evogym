@@ -1,9 +1,18 @@
+import { motion } from 'framer-motion';
+
 import { benefitsData } from '../../shared/data';
 
 import { BenefitCard } from '../../components/BenefitCard';
 import { SectionHeader } from '../../components/SectionHeader';
 
 import './styles.scss';
+
+const variants = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.2 },
+  },
+};
 
 export function Benefits() {
   return (
@@ -24,7 +33,13 @@ export function Benefits() {
           </SectionHeader.Paragraph>
         </SectionHeader.Root>
 
-        <div className="benefits__cards">
+        <motion.div
+          className="benefits__cards"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          variants={variants}
+        >
           {benefitsData.map((benefit) => {
             return (
               <BenefitCard
@@ -35,7 +50,7 @@ export function Benefits() {
               />
             );
           })}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
