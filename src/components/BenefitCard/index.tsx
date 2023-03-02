@@ -1,3 +1,4 @@
+import { CTAButton } from '../CTAButton';
 import './styles.scss';
 
 interface BenefitCardProps {
@@ -12,7 +13,7 @@ export function BenefitCard({ title, description, icon }: BenefitCardProps) {
       <div className="benefit__card_icon">{icon}</div>
       <strong className="benefit__card_title">{title}</strong>
       <p className="benefit__card_description">{description}</p>
-      <a href="/">Learn More</a>
+      <CTAButton variant="link">Learn More</CTAButton>
     </div>
   );
 }

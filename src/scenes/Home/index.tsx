@@ -58,7 +58,7 @@ export function Home() {
             >
               <CTAButton>Join Now</CTAButton>
 
-              <a href="/">Learn More</a>
+              <CTAButton variant="link">Learn More</CTAButton>
             </motion.div>
           </motion.div>
 

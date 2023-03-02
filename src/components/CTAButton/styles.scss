@@ -1,23 +1,46 @@
 .cta-button {
-  background-color: var(--secondary-500);
   border: none;
-  padding: 0.5rem 1.5rem;
   border-radius: 0.25rem;
   font-size: 1rem;
-  font-weight: bold;
-  color: var(--primary-600);
+  font-weight: 700;
   cursor: pointer;
   transition-property: color, background-color;
   transition-duration: 0.25s;
   transition-timing-function: ease-in-out;
 
-  &:is(:hover, :focus) {
-    background-color: var(--primary-500);
-    color: var(--gray-100);
+  &.button {
+    background-color: var(--secondary-500);
+    padding: 0.5rem 1.5rem;
+
+    color: var(--primary-600);
+
+    &:is(:hover, :focus) {
+      background-color: var(--primary-500);
+      color: var(--gray-100);
+    }
+
+    &:focus {
+      outline: 2px solid var(--secondary-500);
+      outline-offset: 3px;
+    }
   }
 
-  &:focus {
-    outline: 2px solid var(--secondary-500);
-    outline-offset: 3px;
+  &.link {
+    background-color: transparent;
+    color: var(--primary-500);
+    text-decoration: underline;
+
+    transition: color 0.25s ease-in-out;
+
+    &:hover {
+      color: var(--secondary-500);
+    }
+
+    &:focus {
+      outline: 2px solid var(--primary-500);
+      outline-offset: 3px;
+
+      color: var(--secondary-500);
+    }
   }
 }
