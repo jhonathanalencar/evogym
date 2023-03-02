@@ -50,18 +50,18 @@ function SectionHeaderHighlight({
   );
 }
 
-interface SectionHeaderDescriptionProps
+interface SectionHeaderParagraphProps
   extends HTMLAttributes<HTMLParagraphElement> {
   children: ReactNode;
 }
 
-function SectionHeaderDescription({
+function SectionHeaderParagraph({
   children,
   className,
   ...rest
-}: SectionHeaderDescriptionProps) {
+}: SectionHeaderParagraphProps) {
   return (
-    <p className={`section-header__description ${className}`} {...rest}>
+    <p className={`section-header__paragraph ${className}`} {...rest}>
       {children}
     </p>
   );
@@ -70,6 +70,6 @@ function SectionHeaderDescription({
 export const SectionHeader = {
   Root: SectionHeaderRoot,
   Title: SectionHeaderTitle,
-  Description: SectionHeaderDescription,
+  Paragraph: SectionHeaderParagraph,
   Highlight: SectionHeaderHighlight,
 };
