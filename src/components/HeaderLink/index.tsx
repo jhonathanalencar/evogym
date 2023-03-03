@@ -1,4 +1,5 @@
 import { LiHTMLAttributes, ReactNode } from 'react';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 import './styles.scss';
 
@@ -15,7 +16,9 @@ export function HeaderLink({
 }: HeaderLinkProps) {
   return (
     <li className={`header__link ${className ? className : ''}`} {...rest}>
-      <a href={linkTo}>{children}</a>
+      <AnchorLink offset="80" href={linkTo}>
+        {children}
+      </AnchorLink>
     </li>
   );
 }

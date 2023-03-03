@@ -17,10 +17,10 @@ export function Navbar() {
     <nav className="main-navigation">
       <ul aria-label="main" className="nav-list">
         <div className="nav-list__left">
-          <HeaderLink linkTo="/" className="active">
+          <HeaderLink linkTo="#home" className="active">
             Home
           </HeaderLink>
-          <HeaderLink linkTo="/">Benefits</HeaderLink>
+          <HeaderLink linkTo="#benefits">Benefits</HeaderLink>
           <HeaderLink linkTo="/">Our Classes</HeaderLink>
           <HeaderLink linkTo="/">Contact Us</HeaderLink>
         </div>
