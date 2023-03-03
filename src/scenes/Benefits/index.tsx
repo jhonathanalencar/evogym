@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 
 import { benefitsData } from '../../shared/data';
 
@@ -6,11 +6,24 @@ import { BenefitCard } from '../../components/BenefitCard';
 import { SectionHeader } from '../../components/SectionHeader';
 
 import './styles.scss';
+import { images } from '../../shared';
+import { CTAButton } from '../../components/CTAButton';
 
-const variants = {
+const cardsVariants: Variants = {
   hidden: {},
   visible: {
     transition: { staggerChildren: 0.2 },
+  },
+};
+
+const imageVariants: Variants = {
+  hidden: {
+    x: -60,
+    opacity: 0,
+  },
+  visible: {
+    x: 0,
+    opacity: 1,
   },
 };
 
@@ -38,7 +51,7 @@ export function Benefits() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
-          variants={variants}
+          variants={cardsVariants}
         >
           {benefitsData.map((benefit) => {
             return (
@@ -51,6 +64,49 @@ export function Benefits() {
             );
           })}
         </motion.div>
+
+        <div className="benefits__content_members">
+          <motion.div
+            className="benefits__image"
+            initial="hidden"
+            whileInView="visible"
+            transition={{ duration: 1 }}
+            viewport={{ once: true, amount: 0.5 }}
+            variants={imageVariants}
+          >
+            <img
+              src={images.BenefitsPageGraphic}
+              alt="woman in white sports bras standing"
+            />
+          </motion.div>
+
+          <div className="members__content">
+            <SectionHeader.Root slide="left">
+              <SectionHeader.Title>
+                Millions of happy members getting{' '}
+                <SectionHeader.Highlight>fit</SectionHeader.Highlight>
+              </SectionHeader.Title>
+              <SectionHeader.Paragraph>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Praesentium excepturi magnam, minima dolor quas accusamus
+                molestias aliquam quos optio numquam nihil ipsa nulla
+                consectetur aliquid similique, delectus vel? Quis explicabo
+                sequi et, esse vel eaque aperiam! Autem vel, quidem iste ratione
+                reiciendis fugit est cumque nemo. Dolorum deserunt corporis
+                fugit?
+              </SectionHeader.Paragraph>
+              <SectionHeader.Paragraph>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Consequatur, natus cumque enim laudantium velit ut soluta
+                adipisci quas possimus rerum repellat nostrum corrupti
+                doloremque laboriosam perspiciatis consequuntur aut ducimus
+                fugit!
+              </SectionHeader.Paragraph>
+            </SectionHeader.Root>
+
+            <CTAButton>Join Now</CTAButton>
+          </div>
+        </div>
       </div>
     </section>
   );

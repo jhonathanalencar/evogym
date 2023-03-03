@@ -5,25 +5,27 @@ import './styles.scss';
 
 type SectionHeaderRootProps = {
   children: ReactNode;
+  slide?: 'right' | 'left';
 } & HTMLAttributes<HTMLDivElement> &
   HTMLMotionProps<'div'>;
-
-const variants = {
-  hidden: {
-    x: -60,
-    opacity: 0,
-  },
-  visible: {
-    x: 0,
-    opacity: 1,
-  },
-};
 
 function SectionHeaderRoot({
   children,
   className,
+  slide = 'right',
   ...rest
 }: SectionHeaderRootProps) {
+  const variants = {
+    hidden: {
+      x: slide === 'right' ? -60 : 60,
+      opacity: 0,
+    },
+    visible: {
+      x: 0,
+      opacity: 1,
+    },
+  };
+
   return (
     <motion.div
       className={`section-header ${className ? className : ''}`}
