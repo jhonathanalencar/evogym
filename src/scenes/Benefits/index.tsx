@@ -1,13 +1,14 @@
 import { motion, Variants } from 'framer-motion';
 
-import { benefitsData } from '../../shared/data';
+import { benefitsData } from './data';
+import { images } from '../../shared';
+import { SectionType, SelectPage } from '../../shared/data';
 
 import { BenefitCard } from '../../components/BenefitCard';
 import { SectionHeader } from '../../components/SectionHeader';
+import { CTAButton } from '../../components/CTAButton';
 
 import './styles.scss';
-import { images } from '../../shared';
-import { CTAButton } from '../../components/CTAButton';
 
 const cardsVariants: Variants = {
   hidden: {},
@@ -27,9 +28,18 @@ const imageVariants: Variants = {
   },
 };
 
-export function Benefits() {
+interface BenefitsProps {
+  setActivePage: (key: SectionType) => void;
+}
+
+export function Benefits({ setActivePage }: BenefitsProps) {
   return (
-    <section id="benefits" className="benefits">
+    <motion.section
+      id="benefits"
+      className="benefits"
+      onViewportEnter={() => setActivePage(SelectPage.BENEFITS)}
+      viewport={{ margin: '-25%' }}
+    >
       <div className="benefits__content">
         <SectionHeader.Root>
           <SectionHeader.Title>
@@ -108,6 +118,6 @@ export function Benefits() {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
