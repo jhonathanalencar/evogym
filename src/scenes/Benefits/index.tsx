@@ -2,7 +2,6 @@ import { motion, Variants } from 'framer-motion';
 
 import { benefitsData } from './data';
 import { images } from '../../shared';
-import { SectionType, SelectPage } from '../../shared/data';
 
 import { BenefitCard } from '../../components/BenefitCard';
 import { SectionHeader } from '../../components/SectionHeader';
@@ -28,18 +27,9 @@ const imageVariants: Variants = {
   },
 };
 
-interface BenefitsProps {
-  setActivePage: (key: SectionType) => void;
-}
-
-export function Benefits({ setActivePage }: BenefitsProps) {
+export function Benefits() {
   return (
-    <motion.section
-      id="benefits"
-      className="benefits"
-      onViewportEnter={() => setActivePage(SelectPage.BENEFITS)}
-      viewport={{ margin: '-25%' }}
-    >
+    <section id="benefits" className="benefits">
       <div className="benefits__content">
         <SectionHeader.Root>
           <SectionHeader.Title>
@@ -118,6 +108,6 @@ export function Benefits({ setActivePage }: BenefitsProps) {
           </div>
         </div>
       </div>
-    </motion.section>
+    </section>
   );
 }

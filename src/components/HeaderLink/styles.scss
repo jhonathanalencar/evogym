@@ -4,6 +4,7 @@
     font-weight: bold;
     color: var(--primary-600);
     transition: color 0.25s ease-in-out;
+    cursor: pointer;
   }
 
   &:hover {
@@ -21,9 +22,7 @@
     }
   }
 
-  &.active {
-    a {
-      color: var(--primary-500);
-    }
+  a.active {
+    color: var(--primary-500);
   }
 }

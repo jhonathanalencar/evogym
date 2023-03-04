@@ -43,9 +43,9 @@ export function Home() {
             </div>
 
             <p className="home__description">
-              Unrivaled Gym. Unparalleled Training Fitness Classes. World Class
-              Studios to get the body Shapes That you Dream of.. Get Your Dream
-              Body Now.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
+              magnam iste quae ab animi perspiciatis odit recusandae, alias
+              expedita quidem.
             </p>
 
             <motion.div

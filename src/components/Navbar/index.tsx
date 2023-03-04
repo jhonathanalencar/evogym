@@ -3,19 +3,13 @@ import { List, X } from 'phosphor-react';
 
 import { useMediaQuery } from '../../hooks/useMediaQuery';
 import { NavbarLinks } from './data';
-import { SectionType } from '../../shared/data';
 
 import { CTAButton } from '../CTAButton';
 import { HeaderLink } from '../HeaderLink';
 
 import './styles.scss';
 
-interface NavbarProps {
-  activePage: SectionType;
-  setActivePage: (key: SectionType) => void;
-}
-
-export function Navbar({ activePage, setActivePage }: NavbarProps) {
+export function Navbar() {
   const isAboveMediumScreens = useMediaQuery('(min-width: 52em)');
 
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -26,12 +20,7 @@ export function Navbar({ activePage, setActivePage }: NavbarProps) {
         <div className="nav-list__left">
           {NavbarLinks.map((link) => {
             return (
-              <HeaderLink
-                key={link.id}
-                linkTo={link.link}
-                className={activePage === link.name ? 'active' : ''}
-                onClick={() => setActivePage(link.name as SectionType)}
-              >
+              <HeaderLink key={link.id} linkTo={link.link}>
                 {link.title}
               </HeaderLink>
             );
@@ -63,12 +52,7 @@ export function Navbar({ activePage, setActivePage }: NavbarProps) {
         <ul aria-label="main">
           {NavbarLinks.map((link) => {
             return (
-              <HeaderLink
-                key={link.id}
-                linkTo={link.link}
-                className={activePage === link.name ? 'active' : ''}
-                onClick={() => setActivePage(link.name as SectionType)}
-              >
+              <HeaderLink key={link.id} linkTo={link.link}>
                 {link.title}
               </HeaderLink>
             );
