@@ -1,4 +1,5 @@
 import { useKeenSlider } from 'keen-slider/react';
+import { motion, Variants } from 'framer-motion';
 
 import { classesData, classesSliderConfig } from './data';
 
@@ -7,6 +8,13 @@ import { ClassSlide } from '../../components/ClassSlide';
 
 import 'keen-slider/keen-slider.min.css';
 import './styles.scss';
+
+const container: Variants = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.3, delayChildren: 0.3 },
+  },
+};
 
 export function OurClasses() {
   const [sliderRef] = useKeenSlider<HTMLDivElement>(classesSliderConfig);
@@ -26,7 +34,14 @@ export function OurClasses() {
           </SectionHeader.Paragraph>
         </SectionHeader.Root>
 
-        <div ref={sliderRef} className="keen-slider">
+        <motion.div
+          ref={sliderRef}
+          className="keen-slider"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          variants={container}
+        >
           {classesData.map((item) => {
             return (
               <ClassSlide
@@ -38,7 +53,7 @@ export function OurClasses() {
               />
             );
           })}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

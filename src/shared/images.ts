@@ -2,7 +2,7 @@ import AbstractWaves from '../assets/AbstractWaves.png';
 import Arrow from '../assets/Arrow.png';
 import BenefitsPageGraphic from '../assets/BenefitsPageGraphic.png';
 import Circles from '../assets/Circles.png';
-import ContactUsPageGraphic from '../assets/ContactUsPageGraphic.png';
+import ContactUsPageGraphic from '../assets/ContactUsPageGraphic.jpg';
 import EvolveText from '../assets/EvolveText.png';
 import HomePageGraphic from '../assets/HomePageGraphic.png';
 import HomePageText from '../assets/HomePageText.png';
