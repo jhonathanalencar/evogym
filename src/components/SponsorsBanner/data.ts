@@ -1,4 +1,4 @@
-import { images } from '../shared';
+import { images } from '../../shared';
 
 export const sponsorsImages = [
   {

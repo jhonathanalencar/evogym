@@ -1,4 +1,4 @@
-import { sponsorsImages } from '../../configs/sponsorsMarquee';
+import { sponsorsImages } from './data';
 
 import { Marquee } from '../Marquee';
 
