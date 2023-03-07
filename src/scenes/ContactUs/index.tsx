@@ -3,6 +3,7 @@ import { motion, Variants } from 'framer-motion';
 import { images } from '../../shared';
 
 import { SectionHeader } from '../../components/SectionHeader';
+import { ContactForm } from '../../components/ContactForm';
 
 import './styles.scss';
 
@@ -49,12 +50,7 @@ export function ContactUs() {
           variants={container}
         >
           <motion.div variants={variants} transition={{ duration: 0.6 }}>
-            <form className="contact-us__form">
-              <input type="text" placeholder="name" />
-              <input type="email" placeholder="email" />
-              <textarea placeholder="message" />
-              <button>submit</button>
-            </form>
+            <ContactForm />
           </motion.div>
 
           <motion.div
