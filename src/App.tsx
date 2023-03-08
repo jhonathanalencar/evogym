@@ -1,3 +1,4 @@
+import { Footer } from './components/Footer';
 import { Header } from './components/Header';
 import { Benefits } from './scenes/Benefits';
 import { ContactUs } from './scenes/ContactUs';
@@ -12,6 +13,7 @@ export function App() {
       <Benefits />
       <OurClasses />
       <ContactUs />
+      <Footer />
     </>
   );
 }
