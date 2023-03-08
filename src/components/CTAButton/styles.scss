@@ -13,6 +13,7 @@
     padding: 0.5rem 1.5rem;
 
     color: var(--primary-600);
+    text-decoration: none;
 
     &:is(:hover, :focus) {
       background-color: var(--primary-500);

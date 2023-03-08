@@ -1,23 +1,32 @@
-import { ButtonHTMLAttributes, ReactNode } from 'react';
+import { ReactNode } from 'react';
+import { Link } from 'react-scroll';
 
 import './styles.scss';
 
-interface CTAButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+interface CTAButtonProps {
   children: ReactNode;
   variant?: 'link' | 'button';
+  linkTo?: string;
 }
 
 export function CTAButton({
   children,
   variant = 'button',
-  ...rest
+  linkTo = 'contactUs',
 }: CTAButtonProps) {
+  const type = variant === 'link' ? 'link' : 'button';
+
   return (
-    <button
-      className={`cta-button ${variant === 'link' ? 'link' : 'button'}`}
-      {...rest}
+    <Link
+      to={linkTo}
+      href={`#${linkTo}`}
+      smooth={true}
+      duration={500}
+      offset={-80}
+      spy={true}
+      className={`cta-button ${type}`}
     >
       {children}
-    </button>
+    </Link>
   );
 }
