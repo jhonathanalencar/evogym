@@ -17,6 +17,7 @@
     ]
   },
   "dependencies": {
+    "@emailjs/browser": "^3.10.0",
     "framer-motion": "^10.0.1",
     "keen-slider": "^6.8.5",
     "phosphor-react": "^1.4.1",
