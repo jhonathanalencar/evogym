@@ -25,7 +25,8 @@
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.43.5",
     "react-scroll": "^1.8.9",
-    "sass": "^1.57.1"
+    "sass": "^1.57.1",
+    "vite-svg-loader": "^4.0.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.26",
