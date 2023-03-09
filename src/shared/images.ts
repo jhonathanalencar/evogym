@@ -14,13 +14,13 @@ import Image5 from '../assets/image5.png';
 import Image6 from '../assets/image6.png';
 import Logo from '../assets/Logo.png';
 import Sparkles from '../assets/Sparkles.png';
-import SponsorForbes from '../assets/SponsorForbes.svg';
-import SponsorFortune from '../assets/SponsorFortune.svg';
-import SponsorRedBull from '../assets/SponsorRedBull.svg';
-import SponsorSpotify from '../assets/SponsorSpotify.svg';
-import SponsorNike from '../assets/SponsorNike.svg';
-import SponsorAdidas from '../assets/SponsorAdidas.svg';
-import SponsorLululemon from '../assets/SponsorLululemon.svg';
+import SponsorForbes from '/src/assets/SponsorForbes.svg';
+import SponsorFortune from '/src/assets/SponsorFortune.svg';
+import SponsorRedBull from '/src/assets/SponsorRedBull.svg';
+import SponsorSpotify from '/src/assets/SponsorSpotify.svg';
+import SponsorNike from '/src/assets/SponsorNike.svg';
+import SponsorAdidas from '/src/assets/SponsorAdidas.svg';
+import SponsorLululemon from '/src/assets/SponsorLululemon.svg';
 
 export default {
   AbstractWaves,
