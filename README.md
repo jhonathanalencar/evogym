@@ -12,7 +12,7 @@
 
 Landing page da academia Evogym.
 
-[Acesse a aplicação online](https://technotes-sy.netlify.app/)
+[Acesse a aplicação online](https://evogym-sy.vercel.app/)
 
 ## 🧪 Tecnologias
 
