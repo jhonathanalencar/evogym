@@ -16,7 +16,6 @@ import Logo from '../assets/Logo.png';
 import Sparkles from '../assets/Sparkles.png';
 import SponsorForbes from '../assets/SponsorForbes.svg';
 import SponsorFortune from '../assets/SponsorFortune.svg';
-// import SponsorRedBull from '../assets/SponsorRedBull.svg';
 import SponsorSpotify from '../assets/SponsorSpotify.svg';
 import SponsorNike from '../assets/SponsorNike.svg';
 import SponsorAdidas from '../assets/SponsorAdidas.svg';
@@ -41,7 +40,6 @@ export default {
   Sparkles,
   SponsorForbes,
   SponsorFortune,
-  // SponsorRedBull,
   SponsorSpotify,
   SponsorNike,
   SponsorAdidas,

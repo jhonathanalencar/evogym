@@ -1,10 +1,6 @@
 import { images } from '../../shared';
 
 export const sponsorsImages = [
-  // {
-  //   url: images.SponsorRedBull,
-  //   alt: 'Red Bull logo',
-  // },
   {
     url: images.SponsorFortune,
     alt: 'Fortune logo',
